@@ -9,10 +9,12 @@ int main()
 {
 	int a, c;
 	char b;
+	int(*HW[])(int,int)={multiply,plus,NULL,minus,NULL,divided};
 	printf("key a Function \nEX: 1 + 1\n");
 	scanf("%i %c %i", &a, &b, &c);
+	printf("%d %c %d = %d\n", a, b, c, HW[b-42](a, c));
 	//IF ELSE IF
-	if (b == '+')
+	/*if (b == '+')
 		printf("%d %c %d = %d\n", a, b, c, plus(a, c));
 	else if (b == '-')
 		printf("%d %c %d = %d\n", a, b, c, minus(a, c));
@@ -20,4 +22,5 @@ int main()
 		printf("%d %c %d = %d\n", a, b, c, multiply(a, c));
 	else if (b == '/')
 		printf("%d %c %d = %d\n", a, b, c, divided(a, c));
-}
+	*/
+		}
